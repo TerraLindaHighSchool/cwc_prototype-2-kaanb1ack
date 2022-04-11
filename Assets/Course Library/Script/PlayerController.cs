@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float horizontalInput;
-    public float speed = 10.0f;
-    public float xRange = 10f;
+    public float speed = 15f;
+    public float xRange = 15f;
 
     public GameObject projectilePrefab;
 
@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         
         if (transform.position.x < -xRange) 
         {
-            transform.position = new Vector3(-10, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
         if (transform.position.x > xRange)
         {
