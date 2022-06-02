@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -11,19 +13,36 @@ public class SpawnManager : MonoBehaviour
     private float startDelay = 2;
     private float spawnInterval = 1.5f;
 
+    private DestroyOutOfBounds destroyOutOfBounds;
+
     void Start()
     {
-        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
+        
+
+    }
+
+    public void StartGame()
+    {
+        destroyOutOfBounds.isGameActive = true;
+        while (destroyOutOfBounds.isGameActive)
+        {
+            InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-      
+        
     }
 
+  
+    
+      
+    
     void SpawnRandomAnimal()
     {
+        
         //Randomly generate animal index and spawn position
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
         int animalIndex = Random.Range(0, animalPrefabs.Length);
