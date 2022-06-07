@@ -336,6 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cbea1ccc30531f4ebb2f3c7b6ed9358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverText: {fileID: 509464496874198353, guid: 46b726978a2602349bb76157b4e9eb27,
+    type: 3}
 --- !u!65 &707867998307929064
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -361,6 +363,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c30326e96c264e468c1fe4ad242f406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroySound: {fileID: 3314124568376856430, guid: f157b46d8b824214087f70f779940f8f,
+    type: 3}
 --- !u!54 &405523361304751186
 Rigidbody:
   m_ObjectHideFlags: 0

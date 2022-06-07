@@ -14,8 +14,7 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectilePrefab;
 
-    public AudioClip shootSound;
-    private AudioSource playerAudio;
+    public AudioSource shootSound;
 
 
     // Update is called once per frame
@@ -26,7 +25,7 @@ public class PlayerController : MonoBehaviour
         {
             //Launch a projectile from the player
             Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
-            playerAudio.PlayOneShot(shootSound, 1.0f);
+            PlayShootSound();
         }
         
         if (transform.position.x < -xRange) 
@@ -45,8 +44,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         
-        playerAudio = GetComponent<AudioSource>();
+        
     }
 
-
+    public void PlayShootSound()
+    {
+        shootSound.Play();
+    }
 }

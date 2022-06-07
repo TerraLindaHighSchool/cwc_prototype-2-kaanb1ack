@@ -11,12 +11,9 @@ public class DestroyOutOfBounds : MonoBehaviour
     private float lowerBound = -10;
     public TextMeshProUGUI gameOverText;
 
-    public bool isGameActive;
-
-
     void Start()
     {
-        isGameActive = true;
+        
         gameOverText = GameObject.Find("GameOverText").GetComponent<TextMeshProUGUI>();
         
     }
@@ -33,7 +30,7 @@ public class DestroyOutOfBounds : MonoBehaviour
             gameOverText.gameObject.SetActive(true);
 
             Destroy(gameObject);
-            isGameActive = false;
+            
         }
     }
 }

@@ -13,23 +13,18 @@ public class SpawnManager : MonoBehaviour
     private float startDelay = 2;
     private float spawnInterval = 1.5f;
 
-    private DestroyOutOfBounds destroyOutOfBounds;
+    
 
     void Start()
     {
-        
 
+        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
     }
 
     public void StartGame()
     {
-        destroyOutOfBounds.isGameActive = true;
-        while (destroyOutOfBounds.isGameActive)
-        {
-            InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
-        }
-    }
 
+    }
     // Update is called once per frame
     void Update()
     {
