@@ -351,6 +351,8 @@ GameObject:
   - component: {fileID: 400046}
   - component: {fileID: 9500000}
   - component: {fileID: 7729153550872415892}
+  - component: {fileID: 629750753499078036}
+  - component: {fileID: 7748992566327564811}
   m_Layer: 0
   m_Name: SimpleFarmer_Man_02_Brown
   m_TagString: Untagged
@@ -412,6 +414,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &629750753499078036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c30326e96c264e468c1fe4ad242f406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroySound: {fileID: 3314124568376856430, guid: f157b46d8b824214087f70f779940f8f,
+    type: 3}
+--- !u!114 &7748992566327564811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 294430c60eb672a459de5a9651c64814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalInput: 0
+  speed: 17
+  xRange: 20
+  projectilePrefab: {fileID: 5627498966388795427, guid: 199c009499e7d9d488a942260c440698,
+    type: 3}
+  shootSound: {fileID: 3984118871570313513, guid: 8b52e46df18b11540853ea56c0b016dc,
+    type: 3}
 --- !u!1 &103896
 GameObject:
   m_ObjectHideFlags: 0
